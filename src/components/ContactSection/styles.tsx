@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledContactSectionContainer = styled.div`
+export const StyledContactSectionContainer = styled.ul`
   display: flex;
   flex-direction: column;
   height: 100%;

@@ -2,6 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import SearchField from './SearchField';
+import SearchIcon from '../../icons/SearchIcon';
 
 describe('SearchField', () => {
   it('renders with placeholder text', () => {
@@ -10,7 +11,7 @@ describe('SearchField', () => {
   });
 
   it('renders with search icon', () => {
-    render(<SearchField />);
+    render(<SearchField icon={<SearchIcon />} />);
     expect(screen.getByTestId('search-icon')).toBeInTheDocument();
   });
 

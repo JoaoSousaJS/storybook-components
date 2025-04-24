@@ -5,6 +5,7 @@ import ContactSection from "../components/ContactSection/ContactSection";
 import { useGetContactList } from "../hooks/getContactListHook";
 import { filterContactByStatus } from "../components/utils/filterContactByStatus";
 import { useDebounce } from "../hooks/useDebounce";
+import SearchIcon from "../icons/SearchIcon";
 
 export default function ContactListPage() {
   const { contactList } = useGetContactList();
@@ -47,6 +48,7 @@ export default function ContactListPage() {
       <SearchField 
         placeholder="Search" 
         onChange={handleSearch} 
+        icon={<SearchIcon />}
       />
       <SectionAccordion 
         title="Attented" 

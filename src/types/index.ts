@@ -3,4 +3,5 @@ export type Contact = {
   name: string;
   email: string;
   image: string;
+  status: 'Attented' | 'Absent';
 };

@@ -1,12 +1,7 @@
-function App() {
+import ContactListPage from "./pages/ContactListPage";
 
-  return (
-    <>
-    <div>
-      <h1>Hello World</h1>
-    </div>
-    </>
-  )
+function App() {
+  return <ContactListPage />
 }
 
 export default App

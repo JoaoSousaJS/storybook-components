@@ -12,7 +12,7 @@ export default function SearchIcon({ width = 20, height = 20, color = "#8E9AA5" 
       viewBox="0 0 20 20" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
-      role="img"
+      data-testid="search-icon"
     >
       <path
         fillRule="evenodd"

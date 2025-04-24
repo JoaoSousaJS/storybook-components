@@ -11,8 +11,7 @@ describe('SearchField', () => {
 
   it('renders with search icon', () => {
     render(<SearchField />);
-    // Since SVG is being used as an image, we can test for its role
-    expect(screen.getByRole('img')).toBeInTheDocument();
+    expect(screen.getByTestId('search-icon')).toBeInTheDocument();
   });
 
   it('calls onChange handler when typing', async () => {

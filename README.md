@@ -1,6 +1,6 @@
 # My component library
 
-This is a component library that I'm building to practice my skills with React, TypeScript, Storybook and Styled Components.
+A React component library built with TypeScript, documented through Storybook, and styled using Styled Components.
 
 ## Running the project
 

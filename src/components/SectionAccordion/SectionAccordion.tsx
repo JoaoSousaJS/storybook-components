@@ -1,5 +1,4 @@
 // SectionAccordion.tsx
-import { useState } from "react";
 import { 
   StyledSectionAccordion, 
   StyledSectionAccordionTitle, 
@@ -11,12 +10,14 @@ import DownIcon from "../../icons/DownIcon";
 import RightIcon from "../../icons/RightIcon";
 
 type SectionAccordionProps = {
-  title: "Absent" | "Present";
+  title: "Attented" | "Absent";
   children: React.ReactNode;
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
 };
 
-export default function SectionAccordion({ title, children }: SectionAccordionProps) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function SectionAccordion({ title, children, isOpen, onOpen, onClose }: SectionAccordionProps) {
 
   return (
     <StyledSectionAccordion>
@@ -24,7 +25,7 @@ export default function SectionAccordion({ title, children }: SectionAccordionPr
         <StyledSectionAccordionTitle>
           {title}
         </StyledSectionAccordionTitle>
-        <StyledSectionAccordionIcon data-testid="accordion-header"  onClick={() => setIsOpen(!isOpen)}>
+        <StyledSectionAccordionIcon data-testid="accordion-header"  onClick={() => isOpen ? onClose() : onOpen()}>
           {isOpen ? <DownIcon /> : <RightIcon />}
         </StyledSectionAccordionIcon>
       </StyledSectionHeaderContainer>

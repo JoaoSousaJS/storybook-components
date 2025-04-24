@@ -7,4 +7,5 @@ export const StyledContactSectionContainer = styled.ul`
   width: 400px;
   padding: 12px 8px;
   background-color: #FFFFFF;
+  margin: 0;
 `;

@@ -23,7 +23,7 @@ export const ContactListItemInfoContainer = styled.div`
   gap: 4px;
 `;
 
-export const ContactListItemName = styled.p`
+export const ContactListItemName = styled.h3`
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -33,7 +33,7 @@ export const ContactListItemName = styled.p`
   margin: 0;
 `;
 
-export const ContactListItemEmail = styled.p`
+export const ContactListItemEmail = styled.span`
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 400;

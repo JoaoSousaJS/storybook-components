@@ -8,6 +8,7 @@ export const StyledSearchFieldContainer = styled.div`
   height: 38px;
   gap: 8px;
   padding: 8px 16px;
+  background-color: #FFFFFF;
 `;
 
 export const StyledSearchFieldInput = styled.input`

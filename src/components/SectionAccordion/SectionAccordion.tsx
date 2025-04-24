@@ -4,7 +4,8 @@ import {
   StyledSectionAccordion, 
   StyledSectionAccordionTitle, 
   StyledSectionHeaderContainer,
-  StyledSectionContent 
+  StyledSectionContent, 
+  StyledSectionAccordionIcon
 } from "./styles";
 import DownIcon from "../../icons/DownIcon";
 import RightIcon from "../../icons/RightIcon";
@@ -19,11 +20,13 @@ export default function SectionAccordion({ title, children }: SectionAccordionPr
 
   return (
     <StyledSectionAccordion>
-      <StyledSectionHeaderContainer onClick={() => setIsOpen(!isOpen)}>
+      <StyledSectionHeaderContainer>
         <StyledSectionAccordionTitle>
           {title}
         </StyledSectionAccordionTitle>
-        {isOpen ? <DownIcon /> : <RightIcon />}
+        <StyledSectionAccordionIcon data-testid="accordion-header"  onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <DownIcon /> : <RightIcon />}
+        </StyledSectionAccordionIcon>
       </StyledSectionHeaderContainer>
       <StyledSectionContent isOpen={isOpen}>
         {children}

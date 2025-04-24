@@ -32,3 +32,7 @@ export const StyledSectionHeaderContainer = styled.div`
   padding-left: 16px;
   height: 37px;
 `;
+
+export const StyledSectionAccordionIcon = styled.div`
+  cursor: pointer;
+`;

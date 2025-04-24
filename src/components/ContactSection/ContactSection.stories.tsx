@@ -14,6 +14,15 @@ export const Default: Story = {
   args: {
     contacts: [
       { id: '1', name: 'Peter Parker', email: 'peter.parker@example.com', image: Thumbnail, status: 'Attented' },
+    ],
+  },
+};
+
+
+export const TwoContacts: Story = {
+  args: {
+    contacts: [
+      { id: '1', name: 'Peter Parker', email: 'peter.parker@example.com', image: Thumbnail, status: 'Attented' },
       { id: '2', name: 'Mary Jane', email: 'mary.jane@example.com', image: Thumbnail, status: 'Absent' },
     ],
   },

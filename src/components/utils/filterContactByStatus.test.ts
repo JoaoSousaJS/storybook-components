@@ -10,7 +10,7 @@ describe('filterContactByStatus', () => {
       name: 'Peter Parker',
       email: 'peter.parker@example.com',
       image: 'image-url',
-      status: 'Attented'
+      status: 'Attended'
     },
     {
       id: '2',
@@ -24,15 +24,15 @@ describe('filterContactByStatus', () => {
       name: 'Harry Osborn',
       email: 'harry.osborn@example.com',
       image: 'image-url',
-      status: 'Attented'
+      status: 'Attended'
     }
   ];
 
-  it('should filter contacts by Attented status', () => {
-    const attendedContacts = filterContactByStatus(mockContacts, 'Attented');
+  it('should filter contacts by Attended status', () => {
+    const attendedContacts = filterContactByStatus(mockContacts, 'Attended');
 
     expect(attendedContacts).toHaveLength(2);
-    expect(attendedContacts.every(contact => contact.status === 'Attented')).toBe(true);
+    expect(attendedContacts.every(contact => contact.status === 'Attended')).toBe(true);
     expect(attendedContacts[0].name).toBe('Peter Parker');
     expect(attendedContacts[1].name).toBe('Harry Osborn');
   });

@@ -12,7 +12,7 @@ export default function ContactListPage() {
   const [search, setSearch] = useState("");
   const debouncedSearch = useDebounce(search);
 
-  const [isAttentedOpen, setIsAttentedOpen] = useState(false);
+  const [isAttendedOpen, setIsAttendedOpen] = useState(false);
   const [isAbsentOpen, setIsAbsentOpen] = useState(false);
 
   // Memoize the filtered list to prevent unnecessary recalculations
@@ -23,8 +23,8 @@ export default function ContactListPage() {
   }, [contactList, debouncedSearch]);
 
   // Memoize the status-filtered lists
-  const attentedContactList = useMemo(() => 
-    filterContactByStatus(filteredContactList, "Attented"),
+  const AttendedContactList = useMemo(() => 
+    filterContactByStatus(filteredContactList, "Attended"),
     [filteredContactList]
   );
 
@@ -38,8 +38,8 @@ export default function ContactListPage() {
     setSearch(e.target.value);
   }, []);
 
-  const handleAttentedOpen = useCallback(() => setIsAttentedOpen(true), []);
-  const handleAttentedClose = useCallback(() => setIsAttentedOpen(false), []);
+  const handleAttendedOpen = useCallback(() => setIsAttendedOpen(true), []);
+  const handleAttendedClose = useCallback(() => setIsAttendedOpen(false), []);
   const handleAbsentOpen = useCallback(() => setIsAbsentOpen(true), []);
   const handleAbsentClose = useCallback(() => setIsAbsentOpen(false), []);
 
@@ -51,12 +51,12 @@ export default function ContactListPage() {
         icon={<SearchIcon />}
       />
       <SectionAccordion 
-        title="Attented" 
-        isOpen={isAttentedOpen} 
-        onOpen={handleAttentedOpen} 
-        onClose={handleAttentedClose}
+        title="Attended" 
+        isOpen={isAttendedOpen} 
+        onOpen={handleAttendedOpen} 
+        onClose={handleAttendedClose}
       >
-        <ContactSection contacts={attentedContactList} />
+        <ContactSection contacts={AttendedContactList} />
       </SectionAccordion>
       <SectionAccordion 
         title="Absent" 

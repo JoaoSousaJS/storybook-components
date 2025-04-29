@@ -7,7 +7,7 @@ export const contactMockList: Contact[] = [
     name: "Peter Parker",
     email: "peter.parker@example.com",
     image: Thumbnail,
-    status: "Attented",
+    status: "Attended",
   },
   {
     id: "2",
@@ -21,7 +21,7 @@ export const contactMockList: Contact[] = [
     name: "Matt Murdock",
     email: "matt.murdock@example.com",
     image: Thumbnail,
-    status: "Attented",
+    status: "Attended",
   },
   {
     id: "4",

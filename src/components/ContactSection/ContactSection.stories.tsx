@@ -36,7 +36,7 @@ const sampleContacts: Contact[] = [
     name: 'Peter Parker',
     email: 'peter.parker@example.com',
     image: Thumbnail,
-    status: 'Attented'
+    status: 'Attended'
   },
   {
     id: '2',
@@ -49,7 +49,7 @@ const sampleContacts: Contact[] = [
     id: '3',
     name: 'Harry Osborn',
     image: Thumbnail,
-    status: 'Attented',
+    status: 'Attended',
     email: 'harry.osborn@example.com',
   }
 ];
@@ -100,7 +100,7 @@ export const ManyContacts: Story = {
       name: `Contact ${index + 1}`,
       email: `contact${index + 1}@example.com`,
       image: Thumbnail,
-      status: index % 2 === 0 ? 'Attented' : 'Absent'
+      status: index % 2 === 0 ? 'Attended' : 'Absent'
     })),
   },
 };
@@ -116,7 +116,7 @@ export const MixedContactInfo: Story = {
         name: 'With Email',
         email: 'with.email@example.com',
         image: Thumbnail,
-        status: 'Attented'
+        status: 'Attended'
       },
       {
         id: '2',
@@ -129,7 +129,7 @@ export const MixedContactInfo: Story = {
         name: 'Very Long Name That Should Wrap Properly In The Layout',
         email: 'very.long.email.address.that.should.wrap@really-long-domain-name.example.com',
         image: Thumbnail,
-        status: 'Attented'
+        status: 'Attended'
       }
     ],
   },

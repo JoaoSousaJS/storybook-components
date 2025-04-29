@@ -17,7 +17,7 @@ import RightIcon from "../../icons/RightIcon";
  * @example
  * ```jsx
  * <SectionAccordion
- *   title="Attented"
+ *   title="Attended"
  *   isOpen={true}
  *   onOpen={() => console.log('opened')}
  *   onClose={() => console.log('closed')}
@@ -27,8 +27,8 @@ import RightIcon from "../../icons/RightIcon";
  * ```
  */
 type SectionAccordionProps = {
-  /** The title of the accordion section. Must be either "Attented" or "Absent" */
-  title: "Attented" | "Absent";
+  /** The title of the accordion section. Must be either "Attended" or "Absent" */
+  title: "Attended" | "Absent";
   /** The content to be shown/hidden */
   children: React.ReactNode;
   /** Controls whether the accordion is expanded */

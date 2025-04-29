@@ -5,7 +5,7 @@ import Thumbnail from '../../assets/thumbnail.png';
 describe('ContactSection', () => {
   it('should render', () => {
     render(<ContactSection contacts={[
-      { id: '1', name: 'Peter Parker', email: 'peter.parker@example.com', image: Thumbnail, status: 'Attented' },
+      { id: '1', name: 'Peter Parker', email: 'peter.parker@example.com', image: Thumbnail, status: 'Attended' },
     ]} />);
     expect(screen.getAllByRole('listitem')).toHaveLength(1);
     expect(screen.getByText('Peter Parker')).toBeInTheDocument();
@@ -13,7 +13,7 @@ describe('ContactSection', () => {
 
   it('should render two contacts', () => {
     render(<ContactSection contacts={[
-      { id: '1', name: 'Peter Parker', email: 'peter.parker@example.com', image: Thumbnail, status: 'Attented' },
+      { id: '1', name: 'Peter Parker', email: 'peter.parker@example.com', image: Thumbnail, status: 'Attended' },
       { id: '2', name: 'Mary Jane', email: 'mary.jane@example.com', image: Thumbnail, status: 'Absent' },
     ]} />);
     expect(screen.getAllByRole('listitem')).toHaveLength(2);

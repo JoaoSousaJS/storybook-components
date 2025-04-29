@@ -20,7 +20,7 @@ const meta: Meta<typeof SectionAccordion> = {
   argTypes: {
     title: {
       control: 'radio',
-      options: ['Attented', 'Absent'],
+      options: ['Attended', 'Absent'],
       description: 'The title of the accordion section',
     },
     isOpen: {
@@ -51,7 +51,7 @@ const sampleContacts: Contact[] = [
     name: 'Peter Parker',
     email: 'peter.parker@example.com',
     image: Thumbnail,
-    status: 'Attented'
+    status: 'Attended'
   },
   {
     id: '2',
@@ -71,7 +71,7 @@ export const Interactive: Story = {
     
     return (
       <SectionAccordion
-        title="Attented"
+        title="Attended"
         isOpen={isOpen}
         onOpen={() => setIsOpen(true)}
         onClose={() => setIsOpen(false)}
@@ -91,7 +91,7 @@ export const InitiallyOpen: Story = {
     
     return (
       <SectionAccordion
-        title="Attented"
+        title="Attended"
         isOpen={isOpen}
         onOpen={() => setIsOpen(true)}
         onClose={() => setIsOpen(false)}
@@ -115,12 +115,12 @@ export const MultipleAccordions: Story = {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         <SectionAccordion
-          title="Attented"
+          title="Attended"
           isOpen={openStates.attended}
           onOpen={() => setOpenStates(prev => ({ ...prev, attended: true }))}
           onClose={() => setOpenStates(prev => ({ ...prev, attended: false }))}
         >
-          <ContactSection contacts={sampleContacts.filter(c => c.status === 'Attented')} />
+          <ContactSection contacts={sampleContacts.filter(c => c.status === 'Attended')} />
         </SectionAccordion>
         
         <SectionAccordion
@@ -147,12 +147,12 @@ export const LongContent: Story = {
       name: `Contact ${index + 1}`,
       email: `contact${index + 1}@example.com`,
       image: Thumbnail,
-      status: 'Attented'
+      status: 'Attended'
     }));
     
     return (
       <SectionAccordion
-        title="Attented"
+        title="Attended"
         isOpen={isOpen}
         onOpen={() => setIsOpen(true)}
         onClose={() => setIsOpen(false)}

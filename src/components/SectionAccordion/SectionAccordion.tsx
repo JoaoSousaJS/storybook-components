@@ -1,4 +1,3 @@
-// SectionAccordion.tsx
 import { 
   StyledSectionAccordion, 
   StyledSectionAccordionTitle, 
